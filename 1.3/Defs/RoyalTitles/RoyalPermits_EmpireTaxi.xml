@@ -5,7 +5,7 @@
 
   <RoyalTitlePermitDef>
     <defName>Broms.CallTransportShuttle</defName>
-    <label>call transport shuttle taxi</label>
+    <label>call transport shuttle taxi1</label>
     <description>Call a shuttle for your own use. It will transport colonists, items, and animals anywhere you like within 70 world tiles.</description>
     <workerClass>Broms.RoyalTitlePermitWorker_CallShuttle</workerClass>
     <!--<workerClass>Broms.RoyalTitlePermitWorker_CallShuttle</workerClass>-->
