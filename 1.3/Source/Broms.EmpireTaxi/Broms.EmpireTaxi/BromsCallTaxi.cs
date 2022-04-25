@@ -21,7 +21,7 @@ namespace RimWorld
 				}
 				return false;
 			}
-			AcceptanceReport acceptanceReport = Broms.RoyalTitlePermitWorker_CallShuttle.ShuttleCanLandHere(target, this.map);
+			AcceptanceReport acceptanceReport = RoyalTitlePermitWorker_CallShuttle.ShuttleCanLandHere(target, this.map);
 			if (!acceptanceReport.Accepted)
 			{
 				Messages.Message(acceptanceReport.Reason, new LookTargets(target.Cell, this.map), MessageTypeDefOf.RejectInput, false);
@@ -33,7 +33,7 @@ namespace RimWorld
 		public override void DrawHighlight(LocalTargetInfo target)
 		{
 			GenDraw.DrawRadiusRing(this.caller.Position, this.def.royalAid.targetingRange, Color.white, null);
-			Broms.RoyalTitlePermitWorker_CallShuttle.DrawShuttleGhost(target, this.map);
+			RoyalTitlePermitWorker_CallShuttle.DrawShuttleGhost(target, this.map);
 		}
 
 		// Token: 0x06005442 RID: 21570 RVA: 0x001C929C File Offset: 0x001C749C
@@ -45,7 +45,7 @@ namespace RimWorld
 		// Token: 0x06005443 RID: 21571 RVA: 0x001C92AC File Offset: 0x001C74AC
 		public override void OnGUI(LocalTargetInfo target)
 		{
-			if (!target.IsValid || !Broms.RoyalTitlePermitWorker_CallShuttle.ShuttleCanLandHere(target, this.map).Accepted)
+			if (!target.IsValid || !RoyalTitlePermitWorker_CallShuttle.ShuttleCanLandHere(target, this.map).Accepted)
 			{
 				GenUI.DrawMouseAttachment(TexCommand.CannotShoot);
 			}
@@ -86,7 +86,7 @@ namespace RimWorld
 			{
 				defaultLabel = this.def.LabelCap + " (" + pawn.LabelShort + ")",
 				defaultDesc = defaultDesc,
-				icon = Broms.RoyalTitlePermitWorker_CallShuttle.CommandTex,
+				icon = RoyalTitlePermitWorker_CallShuttle.CommandTex,
 				action = delegate()
 				{
 					this.CallShuttleToCaravan(pawn, faction, this.free);
@@ -148,7 +148,7 @@ namespace RimWorld
 		// Token: 0x06005448 RID: 21576 RVA: 0x001C94A4 File Offset: 0x001C76A4
 		private void CallShuttleToCaravan(Pawn caller, Faction faction, bool free)
 		{
-			Broms.RoyalTitlePermitWorker_CallShuttle.<>c__DisplayClass10_0 CS$<>8__locals1 = new Broms.RoyalTitlePermitWorker_CallShuttle.<>c__DisplayClass10_0();
+			RoyalTitlePermitWorker_CallShuttle.<>c__DisplayClass10_0 CS$<>8__locals1 = new RoyalTitlePermitWorker_CallShuttle.<>c__DisplayClass10_0();
 			CS$<>8__locals1.caller = caller;
 			CS$<>8__locals1.<>4__this = this;
 			CS$<>8__locals1.faction = faction;
@@ -170,7 +170,7 @@ namespace RimWorld
 		// Token: 0x06005449 RID: 21577 RVA: 0x001C9564 File Offset: 0x001C7764
 		public static void DrawShuttleGhost(LocalTargetInfo target, Map map)
 		{
-			Color ghostCol = Broms.RoyalTitlePermitWorker_CallShuttle.ShuttleCanLandHere(target, map).Accepted ? Designator_Place.CanPlaceColor : Designator_Place.CannotPlaceColor;
+			Color ghostCol = RoyalTitlePermitWorker_CallShuttle.ShuttleCanLandHere(target, map).Accepted ? Designator_Place.CanPlaceColor : Designator_Place.CannotPlaceColor;
 			GhostDrawer.DrawGhostThing(target.Cell, Rot4.North, ThingDefOf.Shuttle, ThingDefOf.Shuttle.graphic, ghostCol, AltitudeLayer.Blueprint, null, true, null);
 			Vector3 position = (target.Cell + IntVec3.South * 2).ToVector3ShiftedWithAltitude(AltitudeLayer.Blueprint);
 			Graphics.DrawMesh(MeshPool.plane10, position, Quaternion.identity, GenDraw.InteractionCellMaterial, 0);
@@ -186,13 +186,13 @@ namespace RimWorld
 			}
 			foreach (IntVec3 cell in GenAdj.OccupiedRect(target.Cell, Rot4.North, ThingDefOf.Shuttle.size))
 			{
-				string reportFromCell = Broms.RoyalTitlePermitWorker_CallShuttle.GetReportFromCell(cell, map, false);
+				string reportFromCell = RoyalTitlePermitWorker_CallShuttle.GetReportFromCell(cell, map, false);
 				if (reportFromCell != null)
 				{
 					return new AcceptanceReport(t + reportFromCell);
 				}
 			}
-			string reportFromCell2 = Broms.RoyalTitlePermitWorker_CallShuttle.GetReportFromCell(target.Cell + ShipJob_Unload.DropoffSpotOffset, map, true);
+			string reportFromCell2 = RoyalTitlePermitWorker_CallShuttle.GetReportFromCell(target.Cell + ShipJob_Unload.DropoffSpotOffset, map, true);
 			if (reportFromCell2 != null)
 			{
 				return new AcceptanceReport(t + reportFromCell2);
