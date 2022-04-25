@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
+using Rimworld;
 using RimWorld.Planet;
 using UnityEngine;
 using Verse;
 
-namespace RimWorld
+namespace Broms.RoyalTransportTaxiService
 {
 	// Token: 0x02000E18 RID: 3608
 	[StaticConstructorOnStartup]

@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E28DC05C-233C-4F59-9396-C3FC8710A592}"
+	ProjectSection(SolutionItems) = preProject
+		..\Broms.EmpireTaxi\Broms.EmpireTaxi\BromsCallTaxi.cs = ..\Broms.EmpireTaxi\Broms.EmpireTaxi\BromsCallTaxi.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
