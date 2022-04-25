@@ -14,7 +14,7 @@
     <permitPointCost>0</permitPointCost>
     <cooldownDays>0</cooldownDays>
     <usableOnWorldMap>true</usableOnWorldMap>
-    <uiPosition>(0,10)</uiPosition>
+    <uiPosition>(1,6)</uiPosition>
     <royalAid>
       <favorCost>0</favorCost>
       <targetingRange>44.9</targetingRange>

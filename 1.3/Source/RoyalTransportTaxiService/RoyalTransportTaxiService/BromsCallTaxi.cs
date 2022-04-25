@@ -9,7 +9,7 @@ namespace Broms.RoyalTransportTaxiService
 {
 	// Token: 0x02000E18 RID: 3608
 	[StaticConstructorOnStartup]
-	public class Broms.RoyalTitlePermitWorker_CallShuttle : RoyalTitlePermitWorker_Targeted
+	public class BromsRoyalTitlePermitWorker_CallShuttle : RoyalTitlePermitWorker_Targeted
 	{
 		// Token: 0x06005440 RID: 21568 RVA: 0x001C91D0 File Offset: 0x001C73D0
 		public override bool ValidateTarget(LocalTargetInfo target, bool showMessages = true)
@@ -22,7 +22,7 @@ namespace Broms.RoyalTransportTaxiService
 				}
 				return false;
 			}
-			AcceptanceReport acceptanceReport = Broms.RoyalTitlePermitWorker_CallShuttle.ShuttleCanLandHere(target, this.map);
+			AcceptanceReport acceptanceReport = BromsRoyalTitlePermitWorker_CallShuttle.ShuttleCanLandHere(target, this.map);
 			if (!acceptanceReport.Accepted)
 			{
 				Messages.Message(acceptanceReport.Reason, new LookTargets(target.Cell, this.map), MessageTypeDefOf.RejectInput, false);
@@ -34,7 +34,7 @@ namespace Broms.RoyalTransportTaxiService
 		public override void DrawHighlight(LocalTargetInfo target)
 		{
 			GenDraw.DrawRadiusRing(this.caller.Position, this.def.royalAid.targetingRange, Color.white, null);
-			Broms.RoyalTitlePermitWorker_CallShuttle.DrawShuttleGhost(target, this.map);
+			BromsRoyalTitlePermitWorker_CallShuttle.DrawShuttleGhost(target, this.map);
 		}
 
 		// Token: 0x06005442 RID: 21570 RVA: 0x001C929C File Offset: 0x001C749C
@@ -46,7 +46,7 @@ namespace Broms.RoyalTransportTaxiService
 		// Token: 0x06005443 RID: 21571 RVA: 0x001C92AC File Offset: 0x001C74AC
 		public override void OnGUI(LocalTargetInfo target)
 		{
-			if (!target.IsValid || !Broms.RoyalTitlePermitWorker_CallShuttle.ShuttleCanLandHere(target, this.map).Accepted)
+			if (!target.IsValid || !BromsRoyalTitlePermitWorker_CallShuttle.ShuttleCanLandHere(target, this.map).Accepted)
 			{
 				GenUI.DrawMouseAttachment(TexCommand.CannotShoot);
 			}
@@ -87,7 +87,7 @@ namespace Broms.RoyalTransportTaxiService
 			{
 				defaultLabel = this.def.LabelCap + " (" + pawn.LabelShort + ")",
 				defaultDesc = defaultDesc,
-				icon = Broms.RoyalTitlePermitWorker_CallShuttle.CommandTex,
+				icon = BromsRoyalTitlePermitWorker_CallShuttle.CommandTex,
 				action = delegate()
 				{
 					this.CallShuttleToCaravan(pawn, faction, this.free);
@@ -149,7 +149,7 @@ namespace Broms.RoyalTransportTaxiService
 		// Token: 0x06005448 RID: 21576 RVA: 0x001C94A4 File Offset: 0x001C76A4
 		private void CallShuttleToCaravan(Pawn caller, Faction faction, bool free)
 		{
-			Broms.RoyalTitlePermitWorker_CallShuttle.<>c__DisplayClass10_0 CS$<>8__locals1 = new Broms.RoyalTitlePermitWorker_CallShuttle.<>c__DisplayClass10_0();
+			BromsRoyalTitlePermitWorker_CallShuttle.<>c__DisplayClass10_0 CS$<>8__locals1 = new BromsRoyalTitlePermitWorker_CallShuttle.<>c__DisplayClass10_0();
 			CS$<>8__locals1.caller = caller;
 			CS$<>8__locals1.<>4__this = this;
 			CS$<>8__locals1.faction = faction;
@@ -171,7 +171,7 @@ namespace Broms.RoyalTransportTaxiService
 		// Token: 0x06005449 RID: 21577 RVA: 0x001C9564 File Offset: 0x001C7764
 		public static void DrawShuttleGhost(LocalTargetInfo target, Map map)
 		{
-			Color ghostCol = Broms.RoyalTitlePermitWorker_CallShuttle.ShuttleCanLandHere(target, map).Accepted ? Designator_Place.CanPlaceColor : Designator_Place.CannotPlaceColor;
+			Color ghostCol = BromsRoyalTitlePermitWorker_CallShuttle.ShuttleCanLandHere(target, map).Accepted ? Designator_Place.CanPlaceColor : Designator_Place.CannotPlaceColor;
 			GhostDrawer.DrawGhostThing(target.Cell, Rot4.North, ThingDefOf.Shuttle, ThingDefOf.Shuttle.graphic, ghostCol, AltitudeLayer.Blueprint, null, true, null);
 			Vector3 position = (target.Cell + IntVec3.South * 2).ToVector3ShiftedWithAltitude(AltitudeLayer.Blueprint);
 			Graphics.DrawMesh(MeshPool.plane10, position, Quaternion.identity, GenDraw.InteractionCellMaterial, 0);
@@ -187,13 +187,13 @@ namespace Broms.RoyalTransportTaxiService
 			}
 			foreach (IntVec3 cell in GenAdj.OccupiedRect(target.Cell, Rot4.North, ThingDefOf.Shuttle.size))
 			{
-				string reportFromCell = Broms.RoyalTitlePermitWorker_CallShuttle.GetReportFromCell(cell, map, false);
+				string reportFromCell = BromsRoyalTitlePermitWorker_CallShuttle.GetReportFromCell(cell, map, false);
 				if (reportFromCell != null)
 				{
 					return new AcceptanceReport(t + reportFromCell);
 				}
 			}
-			string reportFromCell2 = Broms.RoyalTitlePermitWorker_CallShuttle.GetReportFromCell(target.Cell + ShipJob_Unload.DropoffSpotOffset, map, true);
+			string reportFromCell2 = BromsRoyalTitlePermitWorker_CallShuttle.GetReportFromCell(target.Cell + ShipJob_Unload.DropoffSpotOffset, map, true);
 			if (reportFromCell2 != null)
 			{
 				return new AcceptanceReport(t + reportFromCell2);

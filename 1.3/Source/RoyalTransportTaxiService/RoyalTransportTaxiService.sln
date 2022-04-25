@@ -3,11 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E28DC05C-233C-4F59-9396-C3FC8710A592}"
-	ProjectSection(SolutionItems) = preProject
-		BromsCallTaxi.cs = BromsCallTaxi.cs
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoyalTransportTaxiService", "RoyalTransportTaxiService\RoyalTransportTaxiService.csproj", "{3D912DD7-9271-49F7-AA29-5386282E1F9B}"
 EndProject
 Global

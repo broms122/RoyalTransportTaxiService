@@ -1,0 +1,5 @@
+G:\Steam Game - Limit to 1\steamapps\common\RimWorld\Mods\RoyalTransportTaxiService\1.3\Source\RoyalTransportTaxiService\RoyalTransportTaxiService\obj\Debug\net6.0\RoyalTransportTaxiService.csproj.AssemblyReference.cache
+G:\Steam Game - Limit to 1\steamapps\common\RimWorld\Mods\RoyalTransportTaxiService\1.3\Source\RoyalTransportTaxiService\RoyalTransportTaxiService\obj\Debug\net6.0\RoyalTransportTaxiService.GeneratedMSBuildEditorConfig.editorconfig
+G:\Steam Game - Limit to 1\steamapps\common\RimWorld\Mods\RoyalTransportTaxiService\1.3\Source\RoyalTransportTaxiService\RoyalTransportTaxiService\obj\Debug\net6.0\RoyalTransportTaxiService.AssemblyInfoInputs.cache
+G:\Steam Game - Limit to 1\steamapps\common\RimWorld\Mods\RoyalTransportTaxiService\1.3\Source\RoyalTransportTaxiService\RoyalTransportTaxiService\obj\Debug\net6.0\RoyalTransportTaxiService.AssemblyInfo.cs
+G:\Steam Game - Limit to 1\steamapps\common\RimWorld\Mods\RoyalTransportTaxiService\1.3\Source\RoyalTransportTaxiService\RoyalTransportTaxiService\obj\Debug\net6.0\RoyalTransportTaxiService.csproj.CoreCompileInputs.cache
