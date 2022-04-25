@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+   <!-- Utility -->
+
+  <RoyalTitlePermitDef>
+    <defName>CallTransportShuttle</defName>
+    <label>call transport shuttle</label>
+    <description>Call a shuttle for your own use. It will transport colonists, items, and animals anywhere you like within 70 world tiles.</description>
+    <workerClass>RoyalTitlePermitWorker_CallShuttle</workerClass>
+    <!-- <minTitle>Knight</minTitle> -->
+    <faction>Empire</faction>
+    <permitPointCost>0</permitPointCost>
+    <cooldownDays>0</cooldownDays>
+    <usableOnWorldMap>true</usableOnWorldMap>
+    <uiPosition>(0,10)</uiPosition>
+    <royalAid>
+      <favorCost>0</favorCost>
+      <targetingRange>44.9</targetingRange>
+      <targetingRequireLOS>false</targetingRequireLOS>
+    </royalAid>
+  </RoyalTitlePermitDef>
+  
+</Defs>
