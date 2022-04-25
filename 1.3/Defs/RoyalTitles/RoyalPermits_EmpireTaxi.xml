@@ -4,19 +4,19 @@
    <!-- Utility -->
 
   <RoyalTitlePermitDef>
-    <defName>Broms.CallTransportShuttle</defName>
+    <defName>BromsCallTransportShuttle</defName>
     <label>call transport shuttle taxi</label>
     <description>Call a shuttle for your own use. It will transport colonists, items, and animals anywhere you like within 70 world tiles.</description>
-    <workerClass>Broms.RoyalTitlePermitWorker_CallShuttle</workerClass>
+    <workerClass>RoyalTitlePermitWorker_CallShuttle</workerClass>
     <!--<workerClass>Broms.RoyalTitlePermitWorker_CallShuttle</workerClass>-->
-    <!-- <minTitle>Knight</minTitle> -->
+    <minTitle>Knight</minTitle>
     <faction>Empire</faction>
-    <permitPointCost>0</permitPointCost>
+    <permitPointCost>1</permitPointCost>
     <cooldownDays>0</cooldownDays>
     <usableOnWorldMap>true</usableOnWorldMap>
     <uiPosition>(1,6)</uiPosition>
     <royalAid>
-      <favorCost>0</favorCost>
+      <favorCost>1</favorCost>
       <targetingRange>44.9</targetingRange>
       <targetingRequireLOS>false</targetingRequireLOS>
     </royalAid>
