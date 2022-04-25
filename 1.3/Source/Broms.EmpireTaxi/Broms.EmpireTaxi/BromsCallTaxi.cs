@@ -140,7 +140,7 @@ namespace RimWorld
 				this.caller.royalty.GetPermit(this.def, this.calledFaction).Notify_Used();
 				if (!this.free)
 				{
-					this.caller.royalty.TryRemoveFavor(this.calledFaction, this.def.royalAid.favorCost);
+					this.caller.royalty.TryRemoveFavor(this.calledFaction, this.def.royalAid.favorCost);  // use this code section to search for silver cost eventually
 				}
 			}
 		}
