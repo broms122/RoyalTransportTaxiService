@@ -166,7 +166,7 @@ namespace Broms.RoyalTransportTaxiService
 					GenDraw.DrawWorldRadiusRing(CS$<>8__locals1.caravanTile, CS$<>8__locals1.maxLaunchDistance);
 				}
 			}, (GlobalTargetInfo target) => CompLaunchable.TargetingLabelGetter(target, CS$<>8__locals1.caravanTile, CS$<>8__locals1.maxLaunchDistance, Gen.YieldSingle<Caravan>(CS$<>8__locals1.caravan), new Action<int, TransportPodsArrivalAction>(base.<CallShuttleToCaravan>g__Launch|0), null), null);
-	}
+	
 
 		// Token: 0x06005449 RID: 21577 RVA: 0x001C9564 File Offset: 0x001C7764
 		public static void DrawShuttleGhost(LocalTargetInfo target, Map map)
